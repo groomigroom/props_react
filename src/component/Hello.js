@@ -1,13 +1,11 @@
 import { useState } from "react";
 
-export default function Hello(props){
-    console.log(props);
+export default function Hello({age}){
     const [name, setName] = useState("Groom");
-    const [age, setAge] =useState(props.age);
 
     return (
         <div>
-            <h2 id="name">{name}({props.age})</h2>
+            <h2 id="name">{name}({age})</h2>
             <button
                 onClick={() => {
                     setName(name === "Groom" ? "mungmung" : "Groom");
