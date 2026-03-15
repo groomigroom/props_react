@@ -6,7 +6,14 @@ export default function Hello(props){
 
     return (
         <div>
-        
+            <h2 id="name">{name}</h2>
+            <button
+                onClick={() => {
+                    setName(name === "Groom" ? "mungmung" : "Groom");
+                }}
+            >
+
+            </button>
         </div>
     );
 }
